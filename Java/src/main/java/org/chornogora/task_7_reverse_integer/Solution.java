@@ -3,7 +3,7 @@ package org.chornogora.task_7_reverse_integer;
 public class Solution {
 
     public int reverse(int x) {
-        String intAsString = String.valueOf(x).replaceFirst("0+$", "");
+        String intAsString = String.valueOf(x);
         int result = 0;
         int startWith = x > 0 ? 0 : 1;
         for (int i = startWith; i < intAsString.length(); i++) {
