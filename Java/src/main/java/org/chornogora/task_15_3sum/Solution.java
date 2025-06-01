@@ -13,8 +13,6 @@ public class Solution {
 
     public List<List<Integer>> threeSum(int[] nums) {
 
-        long time = System.currentTimeMillis();
-
         Map<Integer, Integer> tokensWithAmount = new HashMap<>();
         for (int num : nums) {
             if (tokensWithAmount.containsKey(num)) {
@@ -23,9 +21,6 @@ public class Solution {
                 tokensWithAmount.put(num, 1);
             }
         }
-
-        long time2 = System.currentTimeMillis();
-        System.out.println(time2 - time);
 
         List<List<Integer>> result = new ArrayList<>();
         if (tokensWithAmount.containsKey(0) && tokensWithAmount.get(0) > 2) {
@@ -54,8 +49,6 @@ public class Solution {
                 }
             }
         }
-
-        System.out.println(System.currentTimeMillis() - time2);
 
         return result;
     }
